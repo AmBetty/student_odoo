@@ -1,0 +1,27 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+
+    <record model="ir.ui.view" id="confirm_wizard_form">
+      <field name="name">student.wizard.form</field>
+      <field name="model">etudiant.wizard</field>
+      <field name="type">form</field>
+      <field name="arch" type="xml">
+        <form string="Confirmation">
+          <group>
+            <label string="Un étudiant avec ce même nom a été trouvé, voulez vous toujours le confirmer ?"/>
+          </group>
+          <group>
+            <field name="idetudiantwizard" invisible="1" style="width: 40%" />
+          </group>
+          <footer>
+            <button name="confirm_dialog" type="object"
+              string="Confirmer" class="oe_highlight"/>
+              <button string="Annuler" class="oe_link" special="cancel" />
+            </footer>
+          </form>
+        </field>
+      </record>
+
+    </data>
+  </odoo>
